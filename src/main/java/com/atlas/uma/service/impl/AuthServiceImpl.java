@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AuthServiceImpl implements AuthService {
-    
+
     @Override
     public CommonResponseDTO<LoginResponseDTO> login(LoginRequestDTO loginRequestDTO) {
         return null;
