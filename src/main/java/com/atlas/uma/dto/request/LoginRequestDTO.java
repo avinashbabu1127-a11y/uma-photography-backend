@@ -13,4 +13,7 @@ public class LoginRequestDTO {
 
     @NotBlank(message = "Password is Required")
     private String password;
+
+    @NotBlank(message = "Full Name is Required")
+    private String fullName;
 }
