@@ -1,6 +1,7 @@
 package com.atlas.uma.controller;
 
 import com.atlas.uma.dto.request.LoginRequestDTO;
+import com.atlas.uma.dto.request.VerifyOtpRequestDTO;
 import com.atlas.uma.dto.response.CommonResponseDTO;
 import com.atlas.uma.dto.response.LoginResponseDTO;
 import com.atlas.uma.service.AuthService;
@@ -21,5 +22,10 @@ public class AuthController {
     @PostMapping("/login")
     public ResponseEntity<CommonResponseDTO<LoginResponseDTO>> login(@Valid @RequestBody LoginRequestDTO loginRequestDTO){
         return ResponseEntity.ok(authService.login(loginRequestDTO));
+    }
+
+    @PostMapping("/verify-otp")
+    public ResponseEntity<CommonResponseDTO<LoginResponseDTO>> verifyOtp(@Valid @RequestBody VerifyOtpRequestDTO verifyOtpRequestDTO){
+        return ResponseEntity.ok(authService.verifyOtp(verifyOtpRequestDTO));
     }
 }
