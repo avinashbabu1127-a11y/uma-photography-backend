@@ -16,6 +16,7 @@ public class EmailServiceImpl implements EmailService {
     public void sendOtp(String email, String otp) {
         SimpleMailMessage message = new SimpleMailMessage();
 
+        message.setFrom("your-email@gmail.com");
         message.setTo(email);
         message.setSubject("UMA Photography- Otp verification");
         message.setText(

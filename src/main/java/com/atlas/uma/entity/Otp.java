@@ -1,7 +1,7 @@
 package com.atlas.uma.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
+
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -28,5 +28,5 @@ public class Otp {
     private LocalDateTime expiryTime;
 
     @Column(nullable = false)
-    private Boolean verified;
+    private boolean verified;
 }

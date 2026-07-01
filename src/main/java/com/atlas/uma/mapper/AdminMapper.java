@@ -13,8 +13,8 @@ public class AdminMapper {
     public static Admin toEntity(LoginRequestDTO dto){
             Admin admin = new Admin();
 
-            admin.setFullName(dto.getFullName());
-            admin.setFullName(dto.getEmail());
+
+            admin.setEmail(dto.getEmail());
             admin.setPassword(dto.getPassword());
 
             return admin;
